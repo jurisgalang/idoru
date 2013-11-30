@@ -28,18 +28,6 @@ The easiest way to install it (if you're on OS X) is to use [Homebrew](http://br
 $ brew install libqrencode
 ````
 
-## Features
-
-* TOTP code generation using various algorithms (SHA1, SHA256, SHA512, etc),
-code lengths, and step-times.
-
-* Helper for generating matching QR code for registration.
-
-## Limitations
-
-At the moment, support is limited to the Google Authenticator and TOTP code
-generation only.
-
 ## Usage
 
 ````ruby
@@ -54,9 +42,21 @@ qrcode = idoru.qrcode
 png    = qrcode.to_png
 png.save(File.expand_path '~/Desktop/acme.png')
 
-# compute 2FA code at current time to verify a registration or an auth challenge
-idoru.authcode
+# print the 2FA code at current time to verify registration or auth challenge
+puts idoru.authcode
 ````
+
+## Features
+
+* TOTP code generation using various algorithms (SHA1, SHA256, SHA512, etc),
+code lengths, and step-times.
+
+* Helper for generating matching QR code for registration.
+
+## Limitations
+
+At the moment, support is limited to the Google Authenticator and TOTP code
+generation only.
 
 ## Contributing
 
