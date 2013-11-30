@@ -2,6 +2,8 @@
 
 A two-factor authentication library.
 
+This library provides the primitives to support a two-factor authentication feature.
+
 ## Installation
 
 Add this line to your application's Gemfile:
