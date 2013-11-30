@@ -16,15 +16,29 @@ Or install it yourself as:
 
     $ gem install idoru
 
-## Prerequisite
+## Dependencies
 
 This gem uses the [RQREncoder](https://github.com/mattyr/rqrencoder) library
 to generate QR codes, so you will need to have `libqrencode` installed in your
 system.
 
+The easiest way to install it (if you're on OS X) is to use [Homebrew](http://brew.sh/):
+
+````sh
+$ brew install libqrencode
+````
+
+## Features
+
+* TOTP code generation using various algorithms (SHA1, SHA256, SHA512, etc),
+code lengths, and step-times.
+
+* Helper for generating matching QR code for registration.
+
 ## Limitations
 
-TOTP and Google Authenticator support only (for now).
+At the moment, support is limited to the Google Authenticator and TOTP code
+generation only.
 
 ## Usage
 
