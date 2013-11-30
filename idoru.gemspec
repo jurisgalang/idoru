@@ -9,7 +9,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Juris Galang']
   spec.email         = ['jurisgalang@gmail.com']
   spec.description   = %q{A two-factor authentication library}
-  spec.summary       = %q{A Two-Factor Authentication library}
+  spec.summary       = %q{
+    A Two-Factor Authentication library. This library provides the primitives
+    to support a two-factor authentication feature.
+  }
   spec.homepage      = 'https://github.com/jurisgalang/idoru'
   spec.license       = 'MIT'
 
