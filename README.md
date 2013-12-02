@@ -46,7 +46,14 @@ png.save(File.expand_path '~/Desktop/acme.png')
 
 # print the 2FA code at current time to verify registration or auth challenge
 puts idoru.authcode
+
+# generate backup verification codes from random points in time
+10.times do
+  time = Time.at(Time.now + rand * Time.now.to_f).utc
+  puts idoru.authcode(time)
+end
 ````
+
 
 ## Features
 
