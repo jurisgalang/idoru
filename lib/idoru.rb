@@ -1,4 +1,6 @@
 require 'singleton'
+require 'forwardable'
+require 'securerandom'
 
 require 'base32'
 require 'open-uri'

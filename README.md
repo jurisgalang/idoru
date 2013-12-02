@@ -35,9 +35,11 @@ $ brew install libqrencode
 ````ruby
 require 'idoru'
 
+# generate a shared secret for 2FA
+secret = Idoru::TwoFactor.key
+
 # create and configure an Idoru::TwoFactor generator
-phrase = 'Beauty is not caused. It is.'
-idoru  = Idoru(issuer: 'Acme, Inc.', uid: 'emily@acme.com', secret: phrase)
+idoru  = Idoru(issuer: 'Acme, Inc.', uid: 'emily@acme.com', secret: secret)
 
 # generate a QR code for 2FA registration and save to a PNG file
 qrcode = idoru.qrcode

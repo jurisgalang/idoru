@@ -1,5 +1,12 @@
 module Idoru
   class TwoFactor
+    class << self
+      extend Forwardable
+      def_delegator SecureRandom, :hex, :key
+    end
+  end
+
+  class TwoFactor
     def initialize uid: required, issuer: required, secret: required,
       length: 6, interval: 30, crypto: 'sha1'
       @uid      = uid
